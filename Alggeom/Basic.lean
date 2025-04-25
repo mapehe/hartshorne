@@ -1,6 +1,8 @@
-import Mathlib.Algebra.MvPolynomial.CommRing
 import Mathlib.Topology.Basic
 import Mathlib.RingTheory.Ideal.Basic
+import Mathlib.FieldTheory.RatFunc.Defs
+import Mathlib.RingTheory.Polynomial.Basic
+import Mathlib.Algebra.MvPolynomial.CommRing
 
 noncomputable section
 
@@ -10,6 +12,7 @@ namespace Poly
 
 -- Denote polynomials over `k` in `n` variables as `k[n]`.
 scoped notation k "[" n "]" => MvPolynomial (Fin n) k
+scoped notation k "(" n ")" => FractionRing (MvPolynomial (Fin n) k)
 
 end Poly
 
