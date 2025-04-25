@@ -8,7 +8,7 @@ noncomputable def φ
   k [n + 1] →+* k(n) :=
   MvPolynomial.eval₂Hom
     (algebraMap k (k(n)))
-    (λ (i : Fin (n + 1)) =>
+    (λ i =>
       if h : (i : ℕ) < n then
         algebraMap (k[n]) (k(n)) (X ⟨i, h⟩)
       else
